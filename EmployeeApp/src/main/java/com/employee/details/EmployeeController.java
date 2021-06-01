@@ -1,7 +1,6 @@
 package com.employee.details;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,14 +31,8 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveEmployee(@ModelAttribute("employee") Employee employee) {
+	public String saveEmployee(@ModelAttribute("employee") Employee employee) {//
 		employeeService.save(employee);
-		return "redirect:/";
-	}
-
-	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public String saveEmployee2(@ModelAttribute("employee") Employee employee) {
-		employeeService.edit(employee);
 		return "redirect:/";
 	}
 
